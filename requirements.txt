@@ -1,0 +1,23 @@
+# C.R.A.V.I.A.S. — CRA VI a.s. Requirements
+# Computer Response Automation - Voice Input Assistance
+
+# ── Core ──────────────────────────────────────────────────────────────────────
+pyyaml                  # Config file parsing
+
+# ── Speech Recognition (STT) ──────────────────────────────────────────────────
+SpeechRecognition       # Fallback STT (Google online)
+vosk                    # Offline STT (preferred) — also download a model:
+                        # wget https://alphacephei.com/vosk/models/vosk-model-small-en-us-0.15.zip
+sounddevice             # Audio input for Vosk
+PyAudio                 # Audio input for SpeechRecognition fallback
+
+# ── Text to Speech (TTS) ──────────────────────────────────────────────────────
+pyttsx3                 # Fallback TTS (espeak is preferred and needs no pip install)
+                        # Install espeak on Linux: sudo apt install espeak
+
+# ── Search ────────────────────────────────────────────────────────────────────
+wikipedia               # Wikipedia lookups
+duckduckgo-search       # DuckDuckGo text search (no API key needed)
+
+# ── System ────────────────────────────────────────────────────────────────────
+psutil                  # Battery, CPU, RAM monitoring

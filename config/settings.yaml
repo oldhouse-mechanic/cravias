@@ -1,0 +1,43 @@
+# C.R.A.V.I.A.S. — CRA VI a.s. Configuration File
+# Computer Response Automation - Voice Input Assistance
+
+assistant:
+  name: "Cravias"
+  full_name: "Carbon Robotic Artificial Xenium"
+  version: "2.0.0"
+  language: "en"
+  wake_word: "cravias"
+
+voice:
+  piper_model: "~/piper-voices/en_US-lessac-high.onnx"   # Piper TTS model path
+  tts_volume: 1.0             # 0.0 to 1.0
+  stt_engine: "vosk"          # vosk (offline) | google (online fallback)
+  stt_model_path: "~/vosk-model-small-en-us"
+  energy_threshold: 200
+  pause_threshold: 1.0
+  listen_timeout: 10          # seconds before giving up
+
+music:
+  local_dir: "~/Music"        # local music directory
+  preferred_player: "vlc"     # vlc | mpv | rhythmbox
+
+system:
+  allow_shutdown: true
+  allow_reboot: true
+  open_browser: "firefox"     # firefox | chromium | brave
+
+memory:
+  max_history: 200            # max conversation entries to keep
+  learn_from_chat: true       # allow Cravias to learn from conversations
+  memory_file: "data/memory.json"
+  learned_file: "data/learned.json"
+
+search:
+  engine: "duckduckgo"        # duckduckgo (no API key needed)
+  wikipedia_sentences: 3
+  open_results_in_browser: true
+
+personality:
+  greet_user: true
+  user_name: ""               # leave empty to auto-detect or ask
+  humor_level: "medium"       # low | medium | high
