@@ -3,7 +3,7 @@
 
 assistant:
   name: "Cravias"
-  full_name: "Carbon Robotic Artificial Xenium"
+  full_name: "Computer Response Automation - Voice Input Assistance"
   version: "2.0.0"
   language: "en"
   wake_word: "cravias"
